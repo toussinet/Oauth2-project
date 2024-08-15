@@ -1,15 +1,16 @@
 <template>
   <section class="bg-gray-50 dark:bg-gray-900">
     <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-      <a
-        href="#"
-        class="flex items-center mb-2 text-2xl font-semibold text-gray-900 dark:text-white"
-      >
-        <img
+      <img
           class="w-20"
           src="../assets/Toussinet.png"
           alt="logo"
         />
+      <a
+        href="#"
+        class="flex items-center mb-2 text-2xl font-semibold text-gray-900 dark:text-white"
+      >
+       
         Welcome to Toussinet Hub
       </a>
       <div class="mb-3">
@@ -30,16 +31,18 @@
 
             <InputComponent  label="Password" type="password" placeholder="••••••••">
             </InputComponent>
-            <SubmitButton @click="store.login" label="Continue"></SubmitButton>
+            <SubmitButton @click="store.signup" label="Continue"></SubmitButton>
             <p class="text-center">
               Or
             </p>
            
             <p class="text-sm font-light text-center text-gray-500 dark:text-gray-400">
               Already a member?
+              <RouterLink to="/login">
               <a href="#" class="font-medium text-primary-600 hover:underline dark:text-primary-500"
                 >Login here</a
               >
+            </RouterLink>
             </p>
           </form>
         </div>

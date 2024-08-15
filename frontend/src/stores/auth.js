@@ -29,6 +29,18 @@ export const authStore = defineStore('auth', {
           console.log(this.user.token)
         })
         .catch((err) => console.log(err))
+    },
+    signup() {
+
+      axios
+        .post('signup', {
+          email: this.email,
+          password: this.password
+        })
+        .then(() => {
+          this.router.push({ path: '/login' })
+        })
+        .catch((err) => console.log(err))
     }
   }
 })
